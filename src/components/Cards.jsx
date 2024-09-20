@@ -6,7 +6,7 @@ function Cards({ cards }) {
       {cards.map((card) => (
         <li
           key={card.id}
-          className="w-[30%] border p-4 flex items-center gap-8 hover:scale-105 hover:bg-white hover:text-black duration-75"
+          className="w-full md:w-[40%] lg:w-[30%] border p-4 flex flex-col xl:flex-row items-center gap-4 hover:scale-105 hover:bg-white hover:text-black duration-75"
         >
           <img
             src={card.sprites.front_default}

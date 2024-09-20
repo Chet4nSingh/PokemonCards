@@ -11,7 +11,7 @@ function App() {
     async function fetchCards() {
       setLoading(true);
       const promises = [];
-      for (let i = 1; i <= 102; i ++) {        
+      for (let i = 1; i <= 198; i ++) {        
         promises.push(axios.get(`https://pokeapi.co/api/v2/pokemon-form/${i}/`));
       }      
       const results = await Promise.all(promises);
@@ -27,7 +27,7 @@ function App() {
   if (loading) return <Spinner />;
 
   return (
-    <main className="min-h-screen py-8 px-16 bg-black text-white">
+    <main className="min-h-screen py-8 px-8 bg-black text-white">
       <h1 className="text-6xl pl-12 mb-16">Pokemon Cards</h1>
       <Cards cards={cards} />
     </main>
